@@ -1,0 +1,64 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Simple Image Encryption Tool</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+<h1>Simple Image Encryption Tool</h1>
+
+
+<label class="file">
+<span>Select image</span>
+<input id="imageInput" type="file" accept="image/*" />
+</label>
+
+
+<div class="controls">
+<label>Operation:
+<select id="operation">
+<option value="xor">XOR (symmetric)</option>
+<option value="swap">Swap permutation</option>
+<option value="xor+swap">XOR + Swap</option>
+</select>
+</label>
+
+
+<label>Key (text or number):
+<input id="key" type="text" placeholder="secret key" />
+</label>
+
+
+<label>Mode:
+<select id="mode">
+<option value="encrypt">Encrypt</option>
+<option value="decrypt">Decrypt</option>
+</select>
+</label>
+
+
+<button id="processBtn">Process</button>
+</div>
+
+
+<div class="preview">
+<div>
+<h3>Original</h3>
+<img id="origPreview" alt="original preview" />
+</div>
+<div>
+<h3>Result</h3>
+<img id="resultPreview" alt="result preview" />
+<a id="downloadLink" download="result.png">Download result</a>
+</div>
+</div>
+
+
+
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
